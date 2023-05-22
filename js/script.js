@@ -22,7 +22,7 @@ else{
 
 let user_number;
 let computer_number;
-
+let message = '';
 
 document.getElementById('generate').onclick = function(){
     user_number = Math.floor(Math.random() * 6) + 1;
@@ -30,11 +30,12 @@ document.getElementById('generate').onclick = function(){
 
     document.getElementById('user_label').innerText = user_number;
     document.getElementById('computer_label').innerText = computer_number;
+    document.getElementById('result').innerText = message;
 
     if(user_number > computer_number){
-        console.log("vince user");
+        message = 'Hai vinto';
     }
     else{
-        console.log("vince computer");
+        message = 'Computer vince';
     }
 }
