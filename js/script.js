@@ -27,15 +27,15 @@ let message = '';
 document.getElementById('generate').onclick = function(){
     user_number = Math.floor(Math.random() * 6) + 1;
     computer_number = Math.floor(Math.random() * 6) + 1;
-
-    document.getElementById('user_label').innerText = user_number;
-    document.getElementById('computer_label').innerText = computer_number;
-    document.getElementById('result').innerText = message;
-
     if(user_number > computer_number){
         message = 'Hai vinto';
     }
     else{
         message = 'Computer vince';
     }
+    document.getElementById('user_label').innerText = user_number;
+    document.getElementById('computer_label').innerText = computer_number;
+    document.getElementById('result').innerText = message;
+
+
 }
