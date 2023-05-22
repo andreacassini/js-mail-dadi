@@ -20,7 +20,21 @@ else{
 
 //secondo esercizio
 
-let user_number = Math.floor(Math.random() * 6) + 1;
-let computer_number = Math.floor(Math.random() * 6) + 1;
+let user_number;
+let computer_number;
 
 
+document.getElementById('generate').onclick = function(){
+    user_number = Math.floor(Math.random() * 6) + 1;
+    computer_number = Math.floor(Math.random() * 6) + 1;
+
+    document.getElementById('user_label').innerText = user_number;
+    document.getElementById('computer_label').innerText = computer_number;
+
+    if(user_number > computer_number){
+        console.log("vince user");
+    }
+    else{
+        console.log("vince computer");
+    }
+}
